@@ -14,7 +14,7 @@ input{
 }
 
 .acc{
-    width: 54%;
+    width: 80%;
     margin: 0 auto;
 }
 .acc__title_wrap{
@@ -32,7 +32,7 @@ input{
     text-align: left;
     font-size: 0.7rem;
     color: white;
-    padding: 1rem;
+    padding: 2rem;
     transition: all ease-in-out 0.5s;
 }
 span{
@@ -48,7 +48,8 @@ span{
     cursor: pointer;
     max-height: 0;
     overflow: hidden;
-    transition: all ease-in-out 1.5s;
+    transform: scale(0);
+    transition: all ease-in-out 0.5s;
 }
 .acc__item_img{
     width: 100%;
@@ -58,6 +59,7 @@ span{
 
 input:checked ~ .acc__item_info{
     max-height: 100%;
+    transform: scale(1);
 
 }
 input:checked ~ .acc__title_wrap{
@@ -84,6 +86,7 @@ input:checked ~ .acc__title_wrap span{
     }
     input:hover ~ .acc__item_info{
         max-height: 100%;
+        transform: scale(1);
     }
     span{
         opacity: 0;
@@ -96,6 +99,9 @@ input:checked ~ .acc__title_wrap span{
     }
     .acc:hover span{
         opacity: 1;
+    }
+    .acc__title_wrap{
+        cursor: cell;
     }
     .acc__title{
         font-size: 1.3rem;
